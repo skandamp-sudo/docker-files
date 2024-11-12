@@ -1,0 +1,21 @@
+Building a Docker using python image
+
+1. What is Docker?
+--> Docker is a tool that makes it easier to create, deploy, and run applications by using "containers." To put it in simple terms, imagine you're packing for a trip, and instead of throwing everything into a big suitcase, you have a bunch of neat, self-contained travel bags, each holding exactly what you need for a specific purpose. That’s kind of what Docker does for software.
+
+2. What is containers?
+--> Containers are lightweight, standalone units that package up a piece of software along with everything it needs to run—like code, libraries, and dependencies. They are isolated from the host system, ensuring that the software runs consistently regardless of the environment.
+
+3. What is Images in docker?
+--> Images are the blueprints or templates for containers. An image is a read-only snapshot of everything needed to create a container, including the application code and system dependencies. Containers are created from images.
+
+4. Basic Commands I used using VS code.
+--> Install Docker desktop using it's website. And configure using personal account. Also install docker in VS code as well for the Access of the docker desktop.
+Here I'm using https://github.com/fireship-io/fireship.io.git as sample code for testing the docker in my system. Just dump this into your VS code and follow these commands for the access of docker.
+
+--> For building the image -> docker build -t myfirstpythonapp . (-t for naming the image)
+--> For running the python image -> docker run myfirstpythonapp
+--> For naming the container -> docker run --name "Any_name_like_without_Quotes" myfirstpythonapp
+--> For listing the containers -> docker ps
+--> For stopping -> docker stop <ID_OF_YOUR_CONTAINER>
+--> For composing the docker (If you have multiple serveices) -> docker-compose up

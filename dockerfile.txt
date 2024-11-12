@@ -1,0 +1,19 @@
+dockerfile :
+FROM python:3.9
+WORKDIR /app
+COPY . /app
+CMD ["python3","app.py"]
+
+.py file:
+import os
+print ("this is a sample image")
+print ("current dir is: ", os.getcwd())
+print (os.listdir())
+
+--------------------------------------------------------------------------------------------
+
+in terminal:
+1. cd ./python-image/
+2. docker build -t mydockerimage1 .
+3. docker run mydockerimage1 
+ 
